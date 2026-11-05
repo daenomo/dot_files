@@ -33,3 +33,4 @@ export XMODIFIERS="@im=fcitx"
 if [ $SHLVL = 1 ]; then
   (fcitx5 --disable=wayland -d --verbose '*'=0 &)
 fi
+eval "$(/home/deman/.local/bin/mise activate zsh)"
