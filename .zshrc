@@ -7,18 +7,6 @@ source $ZSH/oh-my-zsh.sh
 # ===== 環境変数 =====
 export GHCUP_INSTALL_BASE_PREFIX="$HOME"
 
-# ===== Node.js (NVM) =====
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# ===== Node.js パッケージマネージャー (pnpm) =====
-export PNPM_HOME="$HOME/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-
 # ===== GHCup (Haskell) =====
 [ -f "$GHCUP_INSTALL_BASE_PREFIX/.ghcup/env" ] && . "$GHCUP_INSTALL_BASE_PREFIX/.ghcup/env"
 
@@ -33,4 +21,6 @@ export XMODIFIERS="@im=fcitx"
 if [ $SHLVL = 1 ]; then
   (fcitx5 --disable=wayland -d --verbose '*'=0 &)
 fi
+
+# ===== mise =====
 eval "$(${HOME}/.local/bin/mise activate zsh)"
