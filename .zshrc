@@ -4,12 +4,6 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-# ===== 環境変数 =====
-export GHCUP_INSTALL_BASE_PREFIX="$HOME"
-
-# ===== GHCup (Haskell) =====
-[ -f "$GHCUP_INSTALL_BASE_PREFIX/.ghcup/env" ] && . "$GHCUP_INSTALL_BASE_PREFIX/.ghcup/env"
-
 # ===== 日本語入力 (FCITX5) =====
 while true; do
   dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY 2> /dev/null && break
