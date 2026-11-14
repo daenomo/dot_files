@@ -17,4 +17,8 @@ if [ $SHLVL = 1 ]; then
 fi
 
 # ===== mise =====
+export PATH="$HOME/.local/share/mise/shims:$PATH"
 eval "$(${HOME}/.local/bin/mise activate zsh)"
+
+# ===== fzf =====
+source /usr/share/doc/fzf/examples/key-bindings.zsh
