@@ -41,6 +41,13 @@ Zsh シェルの設定ファイル。mise、fzf、Starship、FCITX5 を統合し
 - 日本語コメント付きで設定内容を明確化
 - `$HOME` 変数を使用した相対パスで移植性を確保
 
+### `starship.toml`
+Starship プロンプトの設定ファイルです。
+
+**主な特徴:**
+- ディレクトリと Git ブランチ・ステータスを表示
+- 成功時は緑、失敗時は赤のプロンプト記号を表示
+
 ## インストール方法
 
 ```bash
@@ -49,6 +56,10 @@ git clone https://github.com/daenomo/dot_files.git ~/.dot_files
 
 # tmux 設定をホームディレクトリにシンボリックリンク
 ln -s ~/.dot_files/.tmux.conf ~/.tmux.conf
+
+# Starship 設定をホームディレクトリの設定場所にシンボリックリンク
+mkdir -p ~/.config
+ln -s ~/.dot_files/starship.toml ~/.config/starship.toml
 
 # tmux を起動（既存の tmux セッションを使用している場合は設定をリロード）
 tmux
