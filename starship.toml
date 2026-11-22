@@ -7,16 +7,17 @@ $git_status"""
 add_newline = false
 
 [character]
-success_symbol = "[➜](bold green) "
-error_symbol = "[➜](bold red) "
+success_symbol = "[➜](bold #859900) "
+error_symbol = "[➜](bold #dc322f) "
 
 [directory]
 truncation_length = 1
-read_only = ' 🔒'
+read_only = ' [🔒](bold #dc322f)'
+style = "bold #268bd2"
 
 [git_branch]
-symbol = 'git'
-format = '[$symbol:\([$branch](bold red)\)](bold blue) '
+symbol = "git"
+format = '[$symbol:\([$branch](bold #b58900)\)](bold #268bd2) '
 
 [git_status]
-style = "bold yellow"
+style = "bold #d33682"

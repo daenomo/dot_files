@@ -8,8 +8,9 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
-if (( SHLVL == 1 )) && command -v fcitx5 >/dev/null 2>&1; then
-  fcitx5 --disable=wayland -d --verbose '*'=0 >/dev/null 2>&1 &
+if (( SHLVL == 1 )) && command -v fcitx5 >/dev/null 2>&1 \
+  && ! pgrep -x fcitx5 >/dev/null 2>&1; then
+  fcitx5 --disable=wayland -d --verbose '*'=0 >/dev/null 2>&1 &!
 fi
 
 # ===== mise =====
